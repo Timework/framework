@@ -46,9 +46,89 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+* {
+	box-sizing: border-box;
+}
 .container-full {
     width: 100%;
 }
+$total_columns: 12;
+$width: 100%;
+$gutter-width: 2%;
+$sizes: lg, md, sm;
+
 .row {
-    display: flex;
+	display: flex;
+	padding: 0 $gutter-width;
+
+	& > [class*="col-"]:first-child { margin-left: 0; }
+	& > [class*="col-"]:last-child { margin-right: 0; }
+	& > [class*="col-"] { margin: 0 $gutter-width/2; }
 }
+
+ [class*="col-"] {
+	 min-height: 200px;
+ }
+ @each $size in $sizes {
+	 @if $size == sm {
+		 @media only screen and (max-width: 765px) {
+@for $i from 1 through $total_columns {
+    .col-#{$i}-#{$total_columns}-#{$size} {
+        width: (100% - ($total_columns/$i - 1) * $gutter_width) / $total_columns * $i;
+    }
+}
+.d-block-#{$size} {
+	display: block;
+}
+.d-flex-#{$size} {
+	display: flex;
+}
+.d-none-#{$size} {
+	display: none;
+}
+.d-inline-#{$size} {
+	display: inline;
+}
+		 }
+	 }
+	 @else if $size == md {
+		 @media only screen and (max-width: 995px) {
+@for $i from 1 through $total_columns {
+    .col-#{$i}-#{$total_columns}-#{$size} {
+        width: (100% - ($total_columns/$i - 1) * $gutter_width) / $total_columns * $i;
+    }
+}
+.d-block-#{$size} {
+	display: block;
+}
+.d-flex-#{$size} {
+	display: flex;
+}
+.d-none-#{$size} {
+	display: none;
+}
+.d-inline-#{$size} {
+	display: inline;
+}
+		 }
+	 }
+	 @else if $size == lg {
+@for $i from 1 through $total_columns {
+    .col-#{$i}-#{$total_columns}-#{$size} {
+        width: (100% - ($total_columns/$i - 1) * $gutter_width) / $total_columns * $i;
+    }
+}
+.d-block-#{$size} {
+	display: block;
+}
+.d-flex-#{$size} {
+	display: flex;
+}
+.d-none-#{$size} {
+	display: none;
+}
+.d-inline-#{$size} {
+	display: inline;
+}
+		 }
+ }
