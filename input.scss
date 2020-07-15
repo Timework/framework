@@ -89,6 +89,31 @@ $sizes: lg, md, sm;
 .d-inline-#{$size} {
 	display: inline;
 }
+.jc-start-#{size} {
+	justify-content: start;
+}
+.jc-end-#{size} {
+	justify-content: end;
+}
+.jc-center-#{size} {
+	justify-content: center;
+}
+.jc-between-#{size} {
+	justify-content: space-between;
+}
+.jc-around-#{size} {
+	justify-content: space-around;
+}
+.at-center-#{size} {
+	align-items: center;
+}
+.at-start-#{size} {
+	align-items: start;
+}
+.at-end-#{size} {
+	align-items: end;
+}
+	
 		 }
 	 }
 	 @else if $size == md {
@@ -110,6 +135,30 @@ $sizes: lg, md, sm;
 .d-inline-#{$size} {
 	display: inline;
 }
+.jc-start-#{size} {
+	justify-content: start;
+}
+.jc-end-#{size} {
+	justify-content: end;
+}
+.jc-center-#{size} {
+	justify-content: center;
+}
+.jc-between-#{size} {
+	justify-content: space-between;
+}
+.jc-around-#{size} {
+	justify-content: space-around;
+}
+.at-center-#{size} {
+	align-items: center;
+}
+.at-start-#{size} {
+	align-items: start;
+}
+.at-end-#{size} {
+	align-items: end;
+}
 		 }
 	 }
 	 @else if $size == lg {
@@ -130,5 +179,30 @@ $sizes: lg, md, sm;
 .d-inline-#{$size} {
 	display: inline;
 }
+.jc-start-#{size} {
+	justify-content: start;
+}
+.jc-end-#{size} {
+	justify-content: end;
+}
+.jc-center-#{size} {
+	justify-content: center;
+}
+.jc-between-#{size} {
+	justify-content: space-between;
+}
+.jc-around-#{size} {
+	justify-content: space-around;
+}
+.at-center-#{size} {
+	align-items: center;
+}
+.at-start-#{size} {
+	align-items: start;
+}
+.at-end-#{size} {
+	align-items: end;
+}
+	
 		 }
  }
